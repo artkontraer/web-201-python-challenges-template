@@ -17,12 +17,16 @@
 def wash_hands(n, m):
     # n = number of washes
     # m = number of months
+    
+    if not isinstance(n, int) or not isinstance(m,int):
+        return "Calculation cannot be done"
+    
     oneTime = 21
     oneDayTotalSeconds = oneTime * n
     totalWashes = oneDayTotalSeconds * 30 * m
     minutes = int(totalWashes // 60) 
     seconds = int(totalWashes % 60)
-
+    #print(seconds)
     return(str(minutes) + " minutes and " + str(seconds) + " seconds")
 
 
@@ -30,7 +34,11 @@ def test_challenge_03_case_1():
     assert wash_hands(8, 7) == '588 minutes and 0 seconds'
 
 def test_challenge_03_case_2():
-    assert wash_hands(1.5, 3) == "47 minutes and 15 seconds"
+    assert wash_hands(1.5, 3) == "Calculation cannot be done"
 
 def test_challenge_03_case_3():
     assert wash_hands(0, 0) == "0 minutes and 0 seconds"
+
+def test_challenge_04_case_3():
+    assert wash_hands(2, "G") == "Calculation cannot be done"
+
