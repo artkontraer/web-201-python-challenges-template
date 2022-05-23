@@ -6,10 +6,19 @@
 # True or False if the variable is a palindrome.
 
 def is_palindrome(var):
-    pass
+    var = str()
+    if var == var[::-1]:
+        return True 
+            
+
+
+
 
 def test_challenge_04_palindrome_number():
     assert is_palindrome(545) == True
 
 def test_challenge_04_palindrome_string():
     assert is_palindrome('MADAM') == True    
+
+def test_challenge_04_palindrome_mix():
+    assert is_palindrome('moX2Xom') == True    
