@@ -6,8 +6,22 @@
 # it should return "112233aa!!".
 
 def duplicate_characters(str):
-    pass
+     for character in str: 
+          character = 2 * character
+          return(character)
+     print(character)
 
+     double = [] 
+     for i in str:
+          double.append(i+""+i)
+     # print("".join(double))
+
+     print("".join(double))
+     # return double
+
+# duplicate_characters("super")
+
+     
 def test_challenge_02_case_1(): 
      assert duplicate_characters('now') == 'nnooww'
 
