@@ -4,8 +4,6 @@
 # a list with only the integers in the original 
 # list in the same order.
 
-from operator import neg
-
 
 def extract_integers(mixed_list):
     if not isinstance(mixed_list, list):
